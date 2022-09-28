@@ -18,6 +18,8 @@
         :space-evenly false
         :spacing 7 
         :halign "end"
+    (cava)
+    (updates)
     (notifs)
     (sys)
     (bat)
@@ -47,20 +49,20 @@
 
 (deflisten workspace 'scripts/workspaces subscribe "" ""')
 
-; (defwidget cava[]
-;   (box :class "cava"
-;         :valign "center"
-;     (label :class "cava-label" :width 100 :text cava-bars)))
-; 
-; (deflisten cava-bars "scripts/cavabars")
+(defwidget cava[]
+  (box :class "cava"
+        :valign "center"
+    (label :class "cava-label" :width 100 :text cava-bars)))
 
-; (defwidget updates[]
-;   (box :class "updates"
-;         :valign "center"
-;         :tooltip "Updates: ${update-count}"
-;     (label :class "updates-label" :text " ${update-count ?: '--'}")))
-; 
-; (defpoll update-count :interval "30m" "checkupdates | wc -l")
+(deflisten cava-bars "scripts/cavabars")
+
+(defwidget updates[]
+  (box :class "updates"
+        :valign "center"
+        :tooltip "Updates: ${update-count}"
+    (label :class "updates-label" :text "  ${update-count ?: '--'}")))
+
+(defpoll update-count :interval "30m" "checkupdates | wc -l")
 
 (defwidget notifs[]
   (eventbox :class "notifs-eventbox"
@@ -79,7 +81,7 @@
 
 (defpoll vol-icon :interval "1s" "../common/scripts/vol icon")
 (defpoll wifi-class :interval "1s" "scripts/wifi class")
-(defpoll bat-icon :interval "1s" "scripts/bat icon")
+
 
 (defwidget bat[]
   (eventbox :class "bat-eventbox"
@@ -102,6 +104,7 @@
                     :duration "550ms"
             (label :class "bat-icon" :halign "center" :valign "center" :height 25 :width 25 :text bat-icon)))))))
 
+(defpoll bat-icon :interval "1s" "scripts/bat icon")
 (defpoll bat-val :initial 0 :interval "1s" "scripts/bat level")
 (defpoll bat-class :interval "1s" "scripts/bat class")
 (defvar bat-vis false)

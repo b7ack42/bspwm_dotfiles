@@ -9,7 +9,7 @@ configuration {
 @import "colors.rasi"
  
 window {
-    font: "Noto Sans 14";
+    font: "Noto Sans 20";
     background-color: #181821;
     border: 1;
     border-color: @gray;
@@ -130,7 +130,7 @@ mode-switcher {
 }
 
 button {
-	font: "Font Awesome 6 Free Solid 18";
+	font: "Font Awesome 6 Free Solid 32";
     expand: true;
     padding: 5px 25px;
 }

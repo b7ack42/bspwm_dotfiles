@@ -12,6 +12,7 @@ tooltip {
 }
 
 .bar {
+	// font-size: 18px;
 	font-family: Noto Sans, "Font Awesome 6 Free Solid";
 	background-color: #181821;
 	//background-color: rgba(24, 24, 33, 0.65);
@@ -26,23 +27,24 @@ tooltip {
 }
 
 .start-eventbox {
-	font-size: 16px;
+	font-size: 24px;
 	color: $bg;
 	background-color: $blue;
 	border-radius: 8px;
 }
 
 .start-eventbox:hover {
+	font-size: 32px;
 	color: $bg;
 	background-color: #679df5;
 }
 
 .start-btn {
-	padding: 0.45rem 1.1rem;
+	padding: 0.05rem 1.1rem;
 }
 
 .workspaces {	
-	font-size: 18px;
+	font-size: 20px;
 	border-radius: 8px;
 
 	button:hover {
@@ -71,31 +73,41 @@ tooltip {
 
 .cava {
 	font-family: NotoSansMono Nerd Font;
-	color: #B8BDC9;
+	// color: #B8BDC9;
+	color: $dark-blue;
 	background-color: $raisin-black;
 	border-radius: 8px;
 	padding: 0.1rem 0.5rem;
 }
 
 .cava-label {
+	// font-size: 18px;
+	// padding: 0.1rem 0.5rem;
 }
 
 .updates {
-	font-weight: bold;
+	// font-size: 24px;
+	// font-weight: bold;
 	color: $bg;
 	background-color: $mint;
 	border-radius: 8px;
-	padding: 0.1rem 0.6rem;
+}
+
+.updates-label {
+	font-size: 18px;
+	font-weight: bold;
+	padding: 0.1rem 0.5rem;
 }
 
 .sys {
+	font-size: 18px;
 	background-color: $blue;
 	color: $bg;
 	border-radius: 8px;
-	padding: 0.4rem 0.5rem;
+	padding: 0.1rem 0.6rem;
 
 	box {
-		padding: 0.4rem 0.6rem;
+		padding: 0.1rem 0.5rem;
 	}
 
 	.wifi-on {
@@ -108,10 +120,12 @@ tooltip {
 }
 
 .sys:hover {
+	font-size: 18px;
 	background-color: #679df5;
 }
 
 .notifs-eventbox {
+	// font-size: 18px;
 	font-weight: bold;
 	color: $bg;
 	background-color: $blue;
@@ -124,10 +138,13 @@ tooltip {
 }
 
 .notifs-label {
-	padding: 0.2rem 0.7rem;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 0.1rem 0.5rem;
 }
 
 .bat-box {
+	// font-size: 24px;
 	color: $bg;
 
 	.bat-icon.high {
@@ -190,6 +207,16 @@ tooltip {
 		border-radius: 8px;
 	}
 }
+
+
+.bat-eventbox {
+	font-size: 24px;
+}
+
+.bat-eventbox:hover {
+	font-size: 18px;
+}
+
 
 .time-box {
 	margin-right: 0.5rem;
